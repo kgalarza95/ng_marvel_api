@@ -1,0 +1,25 @@
+<div class="mb-3 input-group">
+    <label for="searchQuery" class="visually-hidden">Buscar Superhéroes:</label>
+    <input type="text" class="form-control rounded-start" id="searchQuery" [(ngModel)]="query"
+        placeholder="Buscar Superhéroes" />
+    <button class="btn btn-primary rounded-end" (click)="buscarHeroesPorNombre()">
+        <i class="bi bi-search"></i>
+    </button>
+</div>
+
+
+<div *ngIf="searchResults.length > 0" class="mt-4">
+    <h3>Resultados de la búsqueda:</h3>
+    <div class="row">
+        <div *ngFor="let superhero of searchResults" class="col-md-4 mb-4">
+            <div class="card" (click)="mostrarDetalleHeroe(superhero.id)">
+                <img [src]="superhero.thumbnail.path + '/portrait_incredible.' + superhero.thumbnail.extension"
+                    class="card-img-top" alt="{{ superhero.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ superhero.name }}</h5>
+                    <p class="card-text">{{ superhero.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

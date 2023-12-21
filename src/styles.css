@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+
+/* Estilo para el fondo de la página */
+body {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    /* Color del texto en el cuerpo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.flex-grow-1 {
+    flex: 1;
+}
+
+
+/* Estilo para los headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #e62429;
+    /* Rojo de Marvel */
+}
+
+/* Estilo para las cartas (cards) */
+.card {
+    background-color: #141414;
+    /* Fondo oscuro para las cartas */
+    border: 1px solid #e62429;
+    /* Borde rojo para las cartas */
+    color: #ffffff;
+    /* Texto blanco en las cartas */
+}
+
+/* Estilo para el cuerpo de la carta */
+.card-body {
+    color: #ffffff;
+    /* Texto blanco en el cuerpo de la carta */
+}
+
+/* Estilo para los enlaces dentro de las cartas */
+.card a {
+    color: #e62429;
+    /* Rojo de Marvel para los enlaces */
+}
+
+/* Estilo para los botones */
+.btn-primary {
+    background-color: #e62429;
+    /* Fondo rojo para los botones */
+    border-color: #e62429;
+    /* Borde rojo para los botones */
+    color: #ffffff;
+    /* Texto blanco en los botones */
+}
+
+/* Estilo para los botones al pasar el mouse */
+.btn-primary:hover {
+    background-color: #ffffff;
+    /* Fondo blanco al pasar el mouse */
+    color: #e62429;
+    /* Texto rojo al pasar el mouse */
+    border-color: #ffffff;
+    /* Borde blanco al pasar el mouse */
+}
+
+
+/* Estilo para las cartas (cards) */
+.card {
+    background-color: #141414;
+    /* Fondo oscuro para las cartas */
+    border: 1px solid #e62429;
+    /* Borde rojo para las cartas */
+    color: #ffffff;
+    /* Texto blanco en las cartas */
+    transition: transform 0.3s ease;
+    /* Transición para suavizar el efecto al pasar el mouse */
+}
+
+/* Efecto de elevación al pasar el mouse */
+.card:hover {
+    transform: translateY(-5px);
+    /* Elevación de 5px al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra al elevar la carta */
+}
+
+
+/* Estilo para el hover de las opciones del navbar */
+.navbar-nav .nav-item:hover {
+    background-color: #343a40;
+    /* Cambiar el fondo al pasar el mouse */
+}
+
+.navbar-nav .nav-item:hover a {
+    color: #ffffff;
+    /* Cambiar el color del texto al pasar el mouse */
+}
+
+/* Estilo para el estado activo de las opciones del navbar */
+.navbar-nav .nav-item.active {
+    background-color: #e62429;
+    /* Fondo para la opción activa */
+}
+
+.navbar-nav .nav-item.active a {
+    color: #ffffff !important;
+    /* Color del texto para la opción activa */
+}
+
+.app-footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 100px; 
+}
+

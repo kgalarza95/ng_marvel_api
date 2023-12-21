@@ -1,0 +1,29 @@
+<!-- <div *ngIf="heroDetails">
+    <h2>{{ heroDetails.name }}</h2>
+</div>
+ -->
+
+<button class="btn btn-secondary" (click)="goBack()">
+    <i class="bi bi-arrow-left"></i> Atrás
+</button>
+
+<div *ngIf="heroDetails" class="row">
+    <h2>{{ heroDetails.name }}</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-fluid" [src]="heroDetails.thumbnail.path + '.' + heroDetails.thumbnail.extension"
+                alt="{{ heroDetails.name }}">
+        </div>
+
+        <div class="col-md-8">
+            <p>{{ heroDetails.description || 'No hay descripción disponible.' }}</p>
+
+            <h3>Enlaces:</h3>
+            <ul>
+                <li><a href="{{ heroDetails.urls[0].url }}" target="_blank">Detalles en Marvel.com</a></li>
+                <li><a href="{{ heroDetails.urls[1].url }}" target="_blank">Comics en Marvel.com</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
