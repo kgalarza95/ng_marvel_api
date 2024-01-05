@@ -3,20 +3,16 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ApiMarvelService } from 'src/app/servicios/api-marvel.service';
 
-
 @Component({
   selector: 'app-buscar',
   templateUrl: './buscar.component.html',
-  styleUrls: ['./buscar.component.css']
+  styleUrls: ['./buscar.component.css'],
 })
 export class BuscarComponent {
-
   textoBuscar: string = 'spider';
   searchResults: any[] = [];
 
-
-  constructor(private marvelService: ApiMarvelService,
-    private router: Router, private toastr: ToastrService) {
+  constructor(private marvelService: ApiMarvelService, private router: Router) {
     this.buscarHeroesPorNombre();
   }
 
@@ -53,7 +49,7 @@ export class BuscarComponent {
   }
 
   mostrarDetalleHeroe(heroId: number) {
-    console.log("heroId:   " + heroId);
+    console.log('heroId:   ' + heroId);
     this.router.navigate(['/heroes', heroId]);
   }
 

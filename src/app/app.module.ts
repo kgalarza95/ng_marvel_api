@@ -39,8 +39,7 @@ import { EmojiFyPipe } from './pipes/emoji-fy.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ToastrModule.forRoot()
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
