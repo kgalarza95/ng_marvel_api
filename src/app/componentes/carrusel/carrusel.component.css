@@ -1,0 +1,46 @@
+/* carrusel.component.css */
+
+/* Estilos generales para el carrusel */
+#marvelCarousel {
+    margin-top: 20px;
+}
+
+/* Estilo para las imágenes del carrusel */
+.carousel-inner img {
+    border-radius: 10px;
+    /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    font-size: 24px;
+    color: #e62429;
+    /* Rojo de Marvel */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para los controles al pasar el mouse */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    color: #ffffff;
+    /* Texto blanco al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para el indicador del carrusel */
+.carousel-indicators li {
+    background-color: #e62429;
+    /* Rojo de Marvel para los indicadores */
+    border: 2px solid #ffffff;
+    /* Borde blanco para los indicadores */
+}
+
+/* Estilo para el indicador activo del carrusel */
+.carousel-indicators .active {
+    background-color: #ffffff;
+    /* Fondo blanco para el indicador activo */
+}

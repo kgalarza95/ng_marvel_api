@@ -10,7 +10,7 @@ import { ApiMarvelService } from 'src/app/servicios/api-marvel.service';
 })
 export class DetalleHeroeComponent implements OnInit {
   heroId: number | undefined | null;
-  heroDetails: any; // Ajusta el tipo según la respuesta de la API
+  heroDetails: any; 
 
 
   constructor(private marvelService: ApiMarvelService,

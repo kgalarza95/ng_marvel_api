@@ -12,6 +12,7 @@ import { PipesComponent } from './componentes/paginas/pipes/pipes.component';
 import { FormsModule } from '@angular/forms';
 import { DetalleHeroeComponent } from './componentes/paginas/subpaginas/detalle-heroe/detalle-heroe.component';
 import { PresentacionComponent } from './componentes/paginas/presentacion/presentacion.component';
+import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PresentacionComponent } from './componentes/paginas/presentacion/presen
     BuscarComponent,
     PipesComponent,
     DetalleHeroeComponent,
-    PresentacionComponent
+    PresentacionComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,

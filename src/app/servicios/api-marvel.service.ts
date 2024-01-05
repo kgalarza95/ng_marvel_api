@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of } from 'rxjs';
+import { Observable, catchError, forkJoin, map, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -50,6 +50,12 @@ export class ApiMarvelService {
         return of(null);
       })
     );
+  }
+
+
+  getFavoriteHeroesDetails(heroIds: number[]): Observable<any[]> {
+    const observables = heroIds.map((id) => this.getHeroDetails(id));
+    return forkJoin(observables);
   }
 
 }

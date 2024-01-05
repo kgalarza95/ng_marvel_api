@@ -6,11 +6,13 @@ import { ApiMarvelService } from './servicios/api-marvel.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
- 
+export class AppComponent {
+
   title = 'marvel-init';
 
-
   constructor(private marvelService: ApiMarvelService) { }
+
+  
+
 
 }

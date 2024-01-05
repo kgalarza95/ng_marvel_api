@@ -122,9 +122,43 @@ h6 {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    min-height: 100px; 
+    min-height: 100px;
 }
 
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #E1E2E1;
+    min-height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 15px;
+    background: white;
+    border-top: 1px solid black;
+
+} */
