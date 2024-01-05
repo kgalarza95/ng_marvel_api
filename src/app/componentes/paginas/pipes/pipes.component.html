@@ -1,1 +1,195 @@
-<p>pipes works!</p>
+<div class="container mt-4">
+    <div class="mb-4">
+        <h2>Introducción</h2>
+        <p>
+            En Angular, los pipes son herramientas que permiten transformar visualmente datos en las plantillas de
+            componentes. Pueden utilizarse para formatear texto, fechas, números y realizar otras operaciones de
+            presentación. Los pipes se aplican en las plantillas mediante el símbolo <code>|</code> y son útiles para
+            mejorar la legibilidad y presentación de la información en la interfaz de usuario.
+        </p>
+    </div>
+    <hr>
+
+    <div class="mb-4">
+        <h2>Angular Pipes - Slice</h2>
+
+        <p>
+            El pipe <code>slice</code> en Angular se utiliza para extraer una porción de una cadena, array u otro tipo
+            iterable.
+            Permite especificar el índice de inicio y, opcionalmente, el índice de finalización para determinar el
+            segmento que se debe extraer.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos una cadena y queremos mostrar solo los primeros 5
+                caracteres en un componente Angular.
+            </p>
+            <p><strong>Texto:</strong> 'Angular es poderoso y flexible'</p>
+            <p><strong>Resultado:</strong> {{ texto | slice:0:5 }}</p>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h2>Angular Pipes - Decimal</h2>
+
+        <p>
+            El pipe <code>decimal</code> en Angular se utiliza para formatear números con decimales.
+            Permite especificar el número de dígitos enteros y decimales que se deben mostrar.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos un número y queremos mostrarlo con dos decimales en un componente Angular.</p>
+            <p><strong>Número:</strong> 1234.5678</p>
+            <p><strong>Resultado:</strong> {{ numero | number:'1.2-2' }}</p>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2>Angular Pipes - Percent</h2>
+
+        <p>
+            El pipe <code>percent</code> en Angular se utiliza para formatear números como porcentajes.
+            Multiplica el valor por 100 y agrega el símbolo de porcentaje (%).
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos un número y queremos mostrarlo como un porcentaje en un componente Angular.</p>
+            <p><strong>Número:</strong> 0.75</p>
+            <p><strong>Resultado:</strong> {{ porcentaje | percent }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="mb-4">
+        <h2>Angular Pipes - Currency</h2>
+
+        <p>
+            El pipe <code>currency</code> en Angular se utiliza para formatear números como valores de moneda.
+            Permite especificar el código de moneda y otras opciones de formato.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos un número y queremos mostrarlo como un valor de moneda en un componente Angular.
+            </p>
+            <p><strong>Número:</strong> 1234.56</p>
+            <p><strong>Resultado:</strong> {{ valorMoneda | currency:'USD':'symbol':'1.2-2' }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="mb-4">
+        <h2>Angular Pipes - Json</h2>
+
+        <p>
+            El pipe <code>json</code> en Angular se utiliza para convertir un objeto en su representación JSON.
+            Es útil para depuración y visualización de datos en formato JSON.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos un objeto y queremos mostrar su representación JSON en un componente Angular.</p>
+            <pre><code><strong>Objeto:</strong> {{ objeto | json }}</code></pre>
+        </div>
+    </div>
+    <hr>
+    <div class="mb-4">
+        <h2>Angular Pipes - Async</h2>
+
+        <p>
+            El pipe <code>async</code> en Angular se utiliza para manejar observables directamente en las plantillas.
+            Proporciona una manera fácil de suscribirse a observables y actualizar la interfaz de usuario cuando los
+            datos
+            cambian.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos un observable y queremos mostrar su valor en un componente Angular.</p>
+            <p><strong>Observable:</strong> {{ observableValue | async }}</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="mb-4">
+        <h2>Angular Pipes - Date</h2>
+
+        <p>
+            El pipe <code>date</code> en Angular se utiliza para formatear fechas según un formato específico.
+            Permite personalizar la presentación de fechas en las plantillas de Angular.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos una fecha y queremos mostrarla en un formato específico en un componente Angular.
+            </p>
+            <p><strong>Fecha:</strong> {{ fecha | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="mb-4">
+        <h2>Angular Pipes - Register Locale Data</h2>
+
+        <p>
+            El método <code>registerLocaleData</code> en Angular se utiliza para registrar datos de localización
+            específicos
+            de un idioma. Permite habilitar el soporte de otros idiomas en tu aplicación.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que queremos habilitar el soporte para el idioma francés en nuestra aplicación Angular.</p>
+            <button type="button" class="btn btn-primary" (click)="cambiarIdioma('fr')">Cambiar a francés</button>
+            <p><strong>Fecha en francés:</strong> {{ fecha | date:'medium' }}</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="mb-4">
+        <h2>Angular Pipes - TitleCase</h2>
+
+        <p>
+            El pipe <code>titlecase</code> en Angular se utiliza para capitalizar la primera letra de cada palabra en
+            una cadena.
+            Proporciona una manera fácil de presentar palabras en formato de título.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p>Supongamos que tenemos una cadena y queremos capitalizar la primera letra de cada palabra en un
+                componente Angular.</p>
+            <p><strong>Cadena:</strong> {{ cadena | titlecase }}</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="mb-4">
+        <h2>Angular Pipe Personalizado - EmojiFy</h2>
+
+        <p>
+            El siguiente ejemplo utiliza un pipe personalizado llamado <code>emojiFy</code> que convierte palabras clave
+            en emojis.
+        </p>
+
+        <h3>Ejemplo:</h3>
+
+        <div>
+            <p><strong>Mensaje Original:</strong> {{ mensaje }}</p>
+            <p><strong>Mensaje Emoji-ficado:</strong> {{ mensaje | emojiFy }}</p>
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="cambiarMensaje()">Cambiar Mensaje</button>
+    </div>
+    <hr>
+</div>

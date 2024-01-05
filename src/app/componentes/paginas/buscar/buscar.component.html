@@ -1,6 +1,6 @@
 <div class="mb-3 input-group">
-    <label for="searchQuery" class="visually-hidden">Buscar Superhéroes:</label>
-    <input type="text" class="form-control rounded-start" id="searchQuery" [(ngModel)]="query"
+    <label for="searchtextoBuscar" class="visually-hidden">Buscar Superhéroes:</label>
+    <input type="text" class="form-control rounded-start" id="searchtextoBuscar" [(ngModel)]="textoBuscar"
         placeholder="Buscar Superhéroes" />
     <button class="btn btn-primary rounded-end" (click)="buscarHeroesPorNombre()">
         <i class="bi bi-search"></i>
@@ -22,4 +22,9 @@
             </div>
         </div>
     </div>
+</div>
+
+<div *ngIf="searchResults.length === 0" class="alert alert-info alert-dismissible fade show" role="alert">
+    No se encontraron resultados.
+    <button type="button" class="btn-close" (click)="cerrarAlerta()" aria-label="Cerrar"></button>
 </div>

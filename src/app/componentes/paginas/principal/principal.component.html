@@ -3,13 +3,13 @@
 
 
 <div class="row">
-    <div *ngFor="let superhero of superheroes" class="col-md-4 mb-4">
-        <div class="card" (click)="mostrarDetalleHeroe(superhero.id)">
-            <img [src]="superhero.thumbnail.path + '/portrait_incredible.' + superhero.thumbnail.extension"
-                class="card-img-top" alt="{{ superhero.name }}">
+    <div *ngFor="let superheroe of superheroes" class="col-md-4 mb-4">
+        <div class="card" (click)="mostrarDetalleHeroe(superheroe.id)">
+            <img [src]="superheroe.thumbnail.path + '/portrait_incredible.' + superheroe.thumbnail.extension"
+                class="card-img-top" alt="{{ superheroe.name }}">
             <div class="card-body">
-                <h5 class="card-title">{{ superhero.name }}</h5>
-                <p class="card-text">{{ superhero.description }}</p>
+                <h5 class="card-title">{{ superheroe.name }}</h5>
+                <p class="card-text">{{ superheroe.description }}</p>
             </div>
         </div>
     </div>

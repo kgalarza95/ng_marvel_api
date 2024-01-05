@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 
@@ -117,7 +116,7 @@ h6 {
     /* Color del texto para la opción activa */
 }
 
-.app-footer {
+/* .app-footer {
     background-color: #343a40;
     color: #ffffff;
     padding: 20px 0;
@@ -127,7 +126,7 @@ h6 {
     width: 100%;
     min-height: 100px;
 }
-
+ */
 
 
 /* * {

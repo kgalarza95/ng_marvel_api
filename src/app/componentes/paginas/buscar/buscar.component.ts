@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ApiMarvelService } from 'src/app/servicios/api-marvel.service';
 
 
@@ -10,19 +11,39 @@ import { ApiMarvelService } from 'src/app/servicios/api-marvel.service';
 })
 export class BuscarComponent {
 
-  query: string = '';
+  textoBuscar: string = 'spider';
   searchResults: any[] = [];
 
 
   constructor(private marvelService: ApiMarvelService,
-    private router: Router) { }
+    private router: Router, private toastr: ToastrService) {
+    this.buscarHeroesPorNombre();
+  }
 
+  /* 
+    buscarHeroesPorNombre(): void {
+      if (this.textoBuscar.trim() !== '') {
+        this.marvelService.searchSuperheroes(this.textoBuscar).subscribe(
+          (response) => {
+            this.searchResults = response.data.results;
+          },
+          (error) => {
+            console.error('Error fetching search results:', error);
+          }
+        );
+      }
+    } */
 
   buscarHeroesPorNombre(): void {
-    if (this.query.trim() !== '') {
-      this.marvelService.searchSuperheroes(this.query).subscribe(
+    if (this.textoBuscar.trim() !== '') {
+      this.marvelService.searchSuperheroes(this.textoBuscar).subscribe(
         (response) => {
           this.searchResults = response.data.results;
+          if (this.searchResults.length === 0) {
+            setTimeout(() => {
+              this.searchResults = [];
+            }, 5000);
+          }
         },
         (error) => {
           console.error('Error fetching search results:', error);
@@ -34,5 +55,9 @@ export class BuscarComponent {
   mostrarDetalleHeroe(heroId: number) {
     console.log("heroId:   " + heroId);
     this.router.navigate(['/heroes', heroId]);
+  }
+
+  cerrarAlerta(): void {
+    this.searchResults = [];
   }
 }

@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { DetalleHeroeComponent } from './componentes/paginas/subpaginas/detalle-heroe/detalle-heroe.component';
 import { PresentacionComponent } from './componentes/paginas/presentacion/presentacion.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { ToastrModule } from 'ngx-toastr';
+import { PadreComponent } from './componentes/paginas/padre/padre.component';
+import { HijoComponent } from './componentes/paginas/hijo/hijo.component';
+import { UppercasePipe } from './pipes/uppercase.pipe';
+import { EmojiFyPipe } from './pipes/emoji-fy.pipe';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
     PipesComponent,
     DetalleHeroeComponent,
     PresentacionComponent,
-    CarruselComponent
+    CarruselComponent,
+    PadreComponent,
+    HijoComponent,
+    UppercasePipe,
+    EmojiFyPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

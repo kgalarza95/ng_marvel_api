@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h4>Hijo Component</h4>
+    <p class="mb-3">Mensaje recibido del padre: {{ mensajeDesdePadre|uppercase }}</p>
+
+    <div class="mb-3">
+        <label class="form-label">Enviar mensaje al padre: </label>
+        <input class="form-control" [(ngModel)]="mensajeParaPadre" />
+        <button class="btn btn-success mt-2" (click)="enviarMensajeAlPadre()">Enviar</button>
+    </div>
+</div>
